@@ -54,6 +54,8 @@
 
         'url' => env('APP_URL', 'http://localhost'),
 
+        'panel_prefix' => env('PANEL_PREFIX', 'panel') . '.',
+
         'asset_url' => env('ASSET_URL', NULL),
 
         /*

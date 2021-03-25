@@ -44,8 +44,9 @@
                     ->group(base_path('routes/api.php'));
 
                 Route::middleware('web')
-                    ->domain('panel.' . config('app.url'))
+                    ->domain(config('app.panel_prefix') . config('app.url'))
                     ->namespace($this->namespace)
+                    ->name(config('app.panel_prefix'))
                     ->group(base_path('routes/panel.php'));
 
                 Route::middleware('web')

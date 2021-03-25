@@ -17,7 +17,7 @@
         protected function redirectTo($request)
         {
             if (!$request->expectsJson()) {
-                return route('login');
+                return redirect()->route(config('app.panel_prefix') . 'login');
             }
         }
     }
