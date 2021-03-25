@@ -8,14 +8,6 @@
 
     class LocalizationMiddleware
     {
-        /**
-         * Handle an incoming request.
-         *
-         * @param Request $request
-         * @param Closure $next
-         *
-         * @return mixed
-         */
         public function handle(Request $request, Closure $next)
         {
             $locale_codes = ['af', 'am', 'ar', 'as', 'az', 'ba', 'be', 'bg', 'bn', 'bo', 'br', 'bs', 'ca', 'co', 'cs', 'cy', 'da', 'de', 'kl', 'km',

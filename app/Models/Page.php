@@ -2,10 +2,13 @@
 
     namespace App\Models;
 
+    use App\Traits\LocalizationTools;
     use Illuminate\Database\Eloquent\Model;
 
     class Page extends Model
     {
+        use LocalizationTools;
+
         public $timestamps = FALSE;
         protected $table = 'pages';
         protected $fillable = ['name', 'title', 'description', 'keywords', 'author', 'content', 'css', 'js'];

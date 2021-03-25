@@ -2,13 +2,21 @@
 
     namespace App\Models;
 
+    use App\Traits\LocalizationTools;
     use Illuminate\Database\Eloquent\Model;
 
     class Category extends Model
     {
+        use LocalizationTools;
+
         public $timestamps = FALSE;
         protected $fillable = ['name', 'slug'];
-        protected $casts = ['name' => 'json', 'slug' => 'json'];
+        protected $casts = [
+            'name' => 'json',
+            'slug' => 'json',
+            'created_at' => 'datetime',
+            'updated_at' => 'datetime',
+            ];
 
         public function image()
         {

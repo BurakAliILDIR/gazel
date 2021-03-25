@@ -17,7 +17,7 @@
          *
          * @var string
          */
-        public const HOME = '/home';
+        public const HOME = '/';
 
         /**
          * The controller namespace for the application.
@@ -44,12 +44,19 @@
                     ->group(base_path('routes/api.php'));
 
                 Route::middleware('web')
+                    ->domain('panel.' . config('app.url'))
+                    ->namespace($this->namespace)
+                    ->group(base_path('routes/panel.php'));
+
+                Route::middleware('web')
+                    ->domain(config('app.url'))
                     ->namespace($this->namespace)
                     ->group(base_path('routes/web.php'));
 
-                Route::middleware('web')
+                Route::middleware(['web', 'locale'])
+                    ->domain('{locale}.' . config('app.url'))
                     ->namespace($this->namespace)
-                    ->group(base_path('routes/panel.php'));
+                    ->group(base_path('routes/web.php'));
             });
         }
 

@@ -13,7 +13,6 @@
                 $table->bigInteger('imageable_id')->index();
                 $table->string('imageable_type')->index();
                 $table->text('path');
-                $table->timestamps();
 
                 $table->index(['imageable_id', 'imageable_type']);
             });
