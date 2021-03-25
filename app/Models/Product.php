@@ -6,6 +6,8 @@
 
     class Product extends Model
     {
+        protected $table = 'products';
+
         protected $fillable = ['name', 'slug', 'description', 'text'];
 
         protected $casts = [

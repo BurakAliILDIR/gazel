@@ -4,21 +4,22 @@
     use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Support\Facades\Schema;
 
-    class CreateSlidersTable extends Migration
+    class CreateMenusTable extends Migration
     {
         public function up()
         {
-            Schema::create('sliders', function (Blueprint $table) {
+            Schema::create('menus', function (Blueprint $table) {
                 $table->id();
-                $table->jsonb('name');
+                $table->foreignId('page_id')->constrained()->cascadeOnUpdate();
+                $table->string('name')->unique();
+                $table->jsonb('title');
                 $table->jsonb('slug');
                 $table->integer('order')->default(0)->index();
-                $table->timestamps();
             });
         }
 
         public function down()
         {
-            Schema::dropIfExists('sliders');
+            Schema::dropIfExists('menus');
         }
     }

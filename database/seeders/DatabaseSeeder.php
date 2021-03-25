@@ -15,6 +15,9 @@
                 SliderSeeder::class,
                 CategorySeeder::class,
                 ProductSeeder::class,
+                SssSeeder::class,
+                PageSeeder::class,
+                MenuSeeder::class,
             ]);
         }
     }

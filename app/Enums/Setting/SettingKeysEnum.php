@@ -19,6 +19,7 @@
         const PINTEREST = 'pinterest';
         const WHATSAPP = 'whatsapp';
         const TELEGRAM = 'telegram';
+        const LINKEDIN = 'linkedin';
         const GOOGLE_MAP = 'google_map';
         const DEFAULT_LANGUAGE = 'default_language';
 

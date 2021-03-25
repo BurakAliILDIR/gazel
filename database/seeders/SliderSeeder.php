@@ -47,9 +47,7 @@
             $slider->save();
 
             $image = new Image;
-
             $image->path = "uploads/slider/$filename";
-
             $slider->image()->save($image);
         }
     }

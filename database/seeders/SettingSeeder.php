@@ -26,6 +26,7 @@
                 SettingKeysEnum::PINTEREST,
                 SettingKeysEnum::WHATSAPP,
                 SettingKeysEnum::TELEGRAM,
+                SettingKeysEnum::LINKEDIN,
                 SettingKeysEnum::GOOGLE_MAP,
                 SettingKeysEnum::DEFAULT_LANGUAGE,
             ];

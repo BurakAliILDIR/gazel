@@ -4,19 +4,20 @@
     use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Support\Facades\Schema;
 
-    class CreateCategoriesTable extends Migration
+    class CreateSssTable extends Migration
     {
         public function up()
         {
-            Schema::create('categories', function (Blueprint $table) {
+            Schema::create('sss', function (Blueprint $table) {
                 $table->id();
                 $table->jsonb('name');
-                $table->jsonb('slug');
+                $table->jsonb('text');
+                $table->integer('order')->default(0)->index();
             });
         }
 
         public function down()
         {
-            Schema::dropIfExists('categories');
+            Schema::dropIfExists('sss');
         }
     }

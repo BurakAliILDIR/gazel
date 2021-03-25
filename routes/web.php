@@ -1,26 +1,18 @@
 <?php
 
+    use App\Models\Slider;
     use Illuminate\Support\Facades\Route;
 
-    /*
-    |--------------------------------------------------------------------------
-    | Web Routes
-    |--------------------------------------------------------------------------
-    |
-    | Here is where you can register web routes for your application. These
-    | routes are loaded by the RouteServiceProvider within a group which
-    | contains the "web" middleware group. Now create something great!
-    |
-    */
+
+    Route::get('/3', function () {
+        return (Slider::query()->first()['name']['tr']);
+        return view('panel.layouts.app');
+    });
     Route::domain('{locale}.' . config('app.url'))->middleware(['locale'])->group(function () {
         Route::get('/', function () {
+            dd(Slider::query()->first()['name']['tr']);
             return view('panel.layouts.app');
         });
 
     });
-
-    Route::get('/', function () {
-        return view('welcome');
-    });
-
 
