@@ -4,8 +4,14 @@
 	use Illuminate\Support\Facades\Route;
 
 	Route::get('/', function () {
-        return (Sss::query()->first()->locale('name'));
-        return view('panel.layouts.app');
+//        return (Sss::query()->first()->locale('name'));
+        return view('welcome');
+    });
+
+
+	Route::get('/deneme', function () {
+//        return (Sss::query()->first()->locale('name'));
+        return view('welcome');
     });
 
 
