@@ -9,7 +9,7 @@
 <div class="card card-custom">
     <div class="card-body">
         <div class="form-group row">
-            <label class="col-form-label text-right col-lg-1 col-sm-12">Default Demo</label>
+            <label class="col-form-label text-right col-lg-1 col-sm-12">Sayfa Özelleştirme</label>
             <div class="col-lg-11 col-md-11 col-sm-12">
                 <div class="page_editor"></div>
             </div>
